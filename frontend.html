@@ -573,7 +573,9 @@
 </main>
 
 <script>
-const API = 'http://localhost:5050';
+const API = window.location.hostname === "localhost"
+  ? "http://localhost:5050"
+  : "https://loan-eo7y.onrender.com";
 let history = [];
 
 async function loadMetrics() {
@@ -615,7 +617,7 @@ async function runPrediction() {
     showResult(data, fields);
     addHistory(data, fields);
   } catch(e) {
-    alert('Could not reach backend. Make sure app.py is running on port 5050.');
+    alert('Could not reach backend. Check Render API URL.');
   } finally {
     btn.disabled = false; btn.classList.remove('loading');
     btn.textContent = 'Predict default risk →';
