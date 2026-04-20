@@ -1,0 +1,32 @@
+{
+  "features": [
+    "Age",
+    "Income",
+    "Loan_Amount",
+    "Credit_Score",
+    "Employment_Years",
+    "edu_enc",
+    "house_enc",
+    "loan_income_ratio",
+    "income_per_yr",
+    "debt_burden",
+    "fin_score",
+    "age_employment"
+  ],
+  "education_order": {
+    "High School": 0,
+    "Bachelors": 1,
+    "Masters": 2,
+    "PhD": 3
+  },
+  "housing_order": {
+    "Rent": 0,
+    "Mortgage": 1,
+    "Own": 2
+  },
+  "metrics": {
+    "accuracy": 0.6,
+    "roc_auc": 0.5468,
+    "note": "Dataset has weak signal (synthetic); model is calibrated for balanced predictions"
+  }
+}
