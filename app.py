@@ -62,10 +62,10 @@ def predict():
             risk = "High"
 
         return jsonify({
-            # "default_prediction": pred,
-            # "default_probability": round(proba * 100, 1),
-            # "risk_level": risk,
-            # "approved": approved
+            "default_prediction": pred,
+            "default_probability": round(proba * 100, 1),
+            "risk_level": risk,
+            "approved": approved
         })
 
     except Exception as e:
